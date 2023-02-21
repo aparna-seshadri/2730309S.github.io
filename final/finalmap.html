@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - wmm_code_v5b*****</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Load Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+<meta charset='utf-8'/>
+<title>International Supermarkets in Glasgow</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet'/>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css'/>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+
+<!-- Map container -->
+
+<div id='map'></div>
+
+<!-- Console container -->
+
+<div id='console'>
+  <h1>International Supermarkets in Glasgow</h1>
+
+<!-- Collapsible Button 1--> 
+
+  <button type="button" class="collapse1">Filter by Rating:</button>
+  
+<!-- Filter by Rating--> 
+
+  <div class='session' id='sliderbar'>
+    <h4><label id='Rate'>&#9733  ≥  1</label></h4>
+    <input id='slider' class='row' type='range' min='1' max='5' step='0.5' value='1' />
+  </div>
+  
+<!-- Collapsible Button 2--> 
+
+  <button type="button" class="collapse2">Filter by Supermarket Type:</button>
+  
+<!-- Filter by Type -->   
+  
+  <div class='row' id='filters'>
+      
+<!-- Row 1--> 
+      
+      <div>
+        <input id='all' type='radio' name='toggle' value='all' checked='checked'>
+        <label for='all'>All</label>
+      
+        <input id='African' type='radio' name='toggle' value='African'>
+        <label for='African'>African</label>
+      
+        <input id='Asian' type='radio' name='toggle' value='Asian'>
+        <label for='Asian'>Asian</label>
+      </div>
+      
+<!-- Row 2--> 
+      <div>
+        <input id='E. European' type='radio' name='toggle' value='E. European'>
+        <label for='E. European'>Eastern European</label>
+        
+        <input id='Mexican' type='radio' name='toggle' value='Mexican'>
+        <label for='Mexican'>Mexican</label>
+      </div>
+      
+<!-- Row 3-->       
+      
+      <div>
+        <input id='M. Eastern' type='radio' name='toggle' value='M. Eastern'>
+        <label for='M. Eastern'>Middle Eastern</label>
+      
+        <input id='S. Asian' type='radio' name='toggle' value='S. Asian'>
+        <label for='S. Asian'>South Asian</label>
+      </div>
+    </div>
+  
+<!-- Collapsible Button 3--> 
+  
+  <button type="button" class="collapse3">Supermarket Directory:</button>
+
+<!-- Table Directory-->  
+<!-- Collapsible Button 2--> 
+  
+  <div class = "holdlist"> 
+  
+<div class = "Af">
+<!-- Type: African Stores--> 
+  <div class = "box2">African</div>
+  </div>
+  <div class='directory1' id='listings'>
+    <div class = "box2">3DEE African Taste</div>
+    <div class = "box2">Blessed African Supermarket</div>
+    <div class = "box2">Domagai World's Market</div>
+    <div class = "box2"><a href="https://eve-afro-caribbean-foods-store.business.site/?utm_source=gmb&utm_medium=referral" target="_blank">Eve Afro Caribbean Foods Store</a></div>
+    <div class = "box2"><a href="https://grace-african-shop.business.site/?utm_source=gmb&utm_medium=referral" target = "_blank">Grace African Shop</a></div>
+    <div class = "box2"><a href="https://www.houseofsolacespices.com/" target ="_blank">House of Solace Spices</a></div>
+    <div class = "box2"><a href="http://www.molokaiplace.com/" target = "_blank">Iswans Food LTD</a></div>
+    <div class = "box2"><a href="https://jah-african-food-afro-heir-and-cosmetics-afro.business.site/?utm_source=gmb&utm_medium=referral" target ="_blank">JAH African Supermarket</a></div>
+    <div class = "box2">Kashmir Store</div>
+    <div class = "box2"><a href="http://mainafricastore.wixsite.com/africa" target = "_blank">Main African Store LTD</a></div>
+    <div class = "box2"><a href="https://selam-grocery.business.site/?utm_source=gmb&utm_medium=referral" target = "_blank">Selam Grocery</a></div>
+    <div class = "box2"><a href = "https://www.sollysafricanvillage.co.uk/" target = "_blank">Solly's African Village</a></div>
+    <div class = "box2">Zimba Mama Africa Groceries</div>
+<!-- Close Container--> 
+  </div>
+  
+<div class = "As">
+<!-- Type: Asian Stores--> 
+  <div class ="box1">Asian</div>
+  </div>
+  <div class='directory2' id='listings'>
+    <div class = "box1">100 Supermarket</div>
+    <div class = "box1"><a href="http://www.allinonefood.co.uk/" target = "_blank">All in One Food & Cosmetics</a></div>
+    <div class = "box1">Chung Ying</div>
+    <div class = "box1"><a href ="http://www.emacityfood.co.uk/" target="_blank">Emacity Supermarket</a></div>
+    <div class = "box1">Everyday Oriental Supermarket</div>
+    <div class = "box1"><a href="http://www.aijia.uk/" target="_blank">iMart Oriental City Center</a></div>
+    <div class = "box1"><a href="http://www.aijia.uk/" target="_blank">iMart Oriental Finneston</a></div>
+    <div class = "box1"><a href="http://www.aijia.uk/" target="_blank">iMart Oriental Westend</a></div>
+    <div class = "box1">Isan Thai Food Market</div>
+    <div class = "box1">Lims</div>  
+    <div class = "box1"><a href="http://www.matthewsfoods.co.uk/" target ="_blank">Matthew Foods Glasgow</a></div>
+    <div class = "box1"><a href="https://miral-food-store.business.site/?utm_source=gmb&utm_medium=referral" target="_blank">Miral Food Store</a></div>
+    <div class = "box1">Nighaar Food Store</div>
+    <div class = "box1"><a href ="http://www.oakasupercity.com/" target = "_blank">Oaka Supercity George Street</a></div>
+    <div class = "box1">Oriental Food Store & Halal Butchers</div>
+    <div class = "box1"><a href ="http://persiagroceriesonline.com/" target ="_blank">Persia Vegetables & Groceries</a></div>
+    <div class = "box1">Super Asia</div>
+<!-- Close Container--> 
+  </div>
+
+<div class = "EE"> 
+<!-- Type: E. European Stores--> 
+  <div class = "box3">Eastern European</div>
+  </div>
+  <div class='directory3' id='listings'>
+    <div class = "box3">Afrin Mini Market</div>
+    <div class = "box3"><a href = "https://www.easterneuropefoods.co.uk/" target = "_blank">Eastern European, Baltic and Ukrainian Food Shop</a></div>
+<!-- Close Container--> 
+  </div>
+  
+<div class = "Mex">  
+<!-- Type: Mexican Stores--> 
+  <div class = "box5">Mexican</div>
+  </div> 
+  <div class='directory4' id='listings'>
+    <div class = "box5"><a href ="https://www.lupepintos.com/" target ="_blank">Lupe Pinto's</a></div>
+<!-- Close Container--> 
+  </div>
+  
+ <div class = "ME">
+ <!-- Type: M. Eastern Stores--> 
+  <div class = "box4">Middle Eastern</div>
+  </div>
+  <div class='directory5' id='listings'>
+    <div class = "box4">Aladdin Supermarket</div>
+     <div class = "box4">El Baraka</div>
+<div class = "box4">Kurdistan Super Market Glasgow</div>
+<!-- Close Container--> 
+  </div>
+  
+  <div class = "SA">
+<!-- Type: S. Asian Stores--> 
+    <div class = "box6">South Asian</div>
+    </div>
+    <div class='directory6' id='listings'>
+      <div class = "box6">Amrik Singh General Store</div>
+      <div class = "box6">Ganapathy Store</div>
+      <div class = "box6">Punjab Stores</div>
+      <div class = "box6"><a href="https://www.subzispice.com/" target="_blank">Subzi Spice Pakora Factory</a></div>
+      <div class = "box6"><a href="https://www.sureshandsons.co.uk/" target="_blank">Suresh & Sons The Grocers</a></div>
+<!-- Close Container-->       
+   </div>
+  
+  <div class = "NA">
+<!-- Type: Other Stores-->     
+  <div class = "box7"> Multicultural or Type: Not Listed </div> 
+  </div>
+  <div class='directory7' id='listings'>
+    <div class = "box7">Bashoor Food Store</div>
+    <div class = "box7">Foodasia</div>
+    <div class = "box7"><a href="https://gulmargsuperstore.co.uk/product-category/meat/" target = "_blank">Gulmarg</a></div>
+    <div class = "box7">Halal Badr Food Store</div>
+    <div class = "box7">Khan Super Store</div>
+    <div class = "box7">KRK Bros</div>
+    <div class = "box7">M Hussain Grocers</div>
+    <div class = "box7">Minar Superstore</div>
+    <div class = "box7"><a href="https://strawberry-garden.business.site/" target="_blank">Strawberry Garden Cash & Carry</a></div>
+<!-- Close Container-->     
+  </div>
+  
+</div>
+  
+<!-- Close Console Container--> 
+  </div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
